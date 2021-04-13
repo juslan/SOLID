@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLID.TipoSocio
 {
-    class HerculesAvidor : SocioAviador, ISocio
+    class HerculesAvidor : Socio, ISocio
     {
         private decimal price;
         private int descuentoPorcentual = 15;
@@ -20,7 +20,8 @@ namespace SOLID.TipoSocio
 
         public decimal PurchaseInStore(int price)
         {
-            return price - (price * (descuentoPorcentual / 100));
+            decimal totalDiscount = price * descuentoPorcentual / 100;
+            return price - totalDiscount;
         }
 
         public void SubscribeNextYear()

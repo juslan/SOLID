@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLID
 {
-    public abstract class SocioAviador
+    public abstract class Socio
     {
         public int Ci { get; set; }
         public string Name { get; set; }
